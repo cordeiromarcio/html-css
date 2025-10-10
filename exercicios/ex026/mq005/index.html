@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+
 </head>
-<body>
+<body onresize="tamanhoTela()">
     <header>
         <h1>Meu Site</h1>
         <span class="material-symbols-outlined" id="burger" onclick="clickmenu()">menu</span>
@@ -16,7 +17,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Notícias</a>
+                <li><a href="#">Notícias</a></li>
                 <li><a href="#">Contato</a></li></li>
             </ul>
         </menu>
@@ -37,6 +38,14 @@
                 lstmenu.style.display = 'none'
             } else{
                 lstmenu.style.display = 'block'
+            }
+        }
+
+        function tamanhoTela(){
+            if(window.innerWidth >= 768){
+                lstmenu.style.display ="block"
+            }else{
+                lstmenu.style.display = "none"
             }
         }
     </script>
