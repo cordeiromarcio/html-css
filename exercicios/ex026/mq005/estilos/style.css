@@ -53,7 +53,7 @@ menu > ul > li > a{
 }
 
 menu > ul > li > a:hover{
-    background-color: blue;
+    background-color: gray;
 }
 
 main{
